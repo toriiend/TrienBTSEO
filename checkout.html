@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thanh Toán – TechZone</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Tech<span>Zone</span></a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link">Trang Chủ</a>
+        <a href="laptop.html" class="nav-link">Laptop</a>
+        <a href="dien-thoai.html" class="nav-link">Điện Thoại</a>
+        <a href="phu-kien.html" class="nav-link">Phụ Kiện</a>
+        <a href="linh-kien-pc.html" class="nav-link">Linh Kiện PC</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Checkout Steps -->
+  <div style="background:var(--bg2);border-bottom:1px solid var(--border);padding:16px 0;">
+    <div class="container">
+      <div style="display:flex;align-items:center;gap:0;justify-content:center;font-size:0.82rem;">
+        <span style="color:var(--text-muted);">🛒 <a href="cart.html" style="color:var(--accent);">Giỏ hàng</a></span>
+        <span style="margin:0 12px;color:var(--border);">────</span>
+        <span style="color:var(--accent);font-weight:700;">📋 Thông tin giao hàng</span>
+        <span style="margin:0 12px;color:var(--border);">────</span>
+        <span style="color:var(--text-muted);">✅ Xác nhận đơn hàng</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- SUCCESS STATE -->
+      <div id="checkout-success" class="checkout-success">
+        <div class="success-icon">🎉</div>
+        <h2>Đặt Hàng Thành Công!</h2>
+        <p>Cảm ơn bạn đã tin tưởng TechZone. Đơn hàng của bạn đang được xử lý và sẽ được giao trong thời gian sớm nhất.</p>
+        <div class="order-code" id="order-code-display">TZ-2025-######</div>
+        <p style="color:var(--text-muted);font-size:0.85rem;">Mã đơn hàng của bạn. Chúng tôi sẽ gửi xác nhận qua email.</p>
+        <a href="index.html" class="btn btn-primary" style="margin-top:8px;">← Tiếp Tục Mua Sắm</a>
+      </div>
+
+      <!-- FORM -->
+      <div id="checkout-form-wrap">
+        <div class="checkout-layout">
+
+          <!-- Left: Form -->
+          <div>
+            <form id="checkout-form" novalidate>
+
+              <!-- Shipping Info -->
+              <div class="checkout-form-card" style="margin-bottom:24px;">
+                <h2>📦 Thông Tin Giao Hàng</h2>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="co-name">Họ và tên *</label>
+                    <input class="co-input" type="text" id="co-name" placeholder="Nguyễn Văn A" autocomplete="name" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="co-phone">Số điện thoại *</label>
+                    <input class="co-input" type="tel" id="co-phone" placeholder="0912 345 678" autocomplete="tel" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="co-email">Email *</label>
+                  <input class="co-input" type="email" id="co-email" placeholder="email@example.com" autocomplete="email" />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="co-address">Địa chỉ *</label>
+                  <input class="co-input" type="text" id="co-address" placeholder="Số nhà, tên đường, phường/xã" autocomplete="street-address" />
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="co-city">Tỉnh / Thành phố *</label>
+                    <select class="co-select" id="co-city" autocomplete="address-level1">
+                      <option value="">-- Chọn tỉnh/thành --</option>
+                      <option>TP. Hồ Chí Minh</option>
+                      <option>Hà Nội</option>
+                      <option>Đà Nẵng</option>
+                      <option>Cần Thơ</option>
+                      <option>Hải Phòng</option>
+                      <option>Bình Dương</option>
+                      <option>Đồng Nai</option>
+                      <option>An Giang</option>
+                      <option>Bà Rịa – Vũng Tàu</option>
+                      <option>Bắc Giang</option>
+                      <option>Bắc Kạn</option>
+                      <option>Bắc Liêu</option>
+                      <option>Bắc Ninh</option>
+                      <option>Bến Tre</option>
+                      <option>Bình Định</option>
+                      <option>Bình Phước</option>
+                      <option>Bình Thuận</option>
+                      <option>Cà Mau</option>
+                      <option>Cao Bằng</option>
+                      <option>Đắk Lắk</option>
+                      <option>Đắk Nông</option>
+                      <option>Điện Biên</option>
+                      <option>Gia Lai</option>
+                      <option>Hà Giang</option>
+                      <option>Hà Nam</option>
+                      <option>Hà Tĩnh</option>
+                      <option>Hải Dương</option>
+                      <option>Hậu Giang</option>
+                      <option>Hòa Bình</option>
+                      <option>Hưng Yên</option>
+                      <option>Khánh Hòa</option>
+                      <option>Kiên Giang</option>
+                      <option>Kon Tum</option>
+                      <option>Lai Châu</option>
+                      <option>Lâm Đồng</option>
+                      <option>Lạng Sơn</option>
+                      <option>Lào Cai</option>
+                      <option>Long An</option>
+                      <option>Nam Định</option>
+                      <option>Nghệ An</option>
+                      <option>Ninh Bình</option>
+                      <option>Ninh Thuận</option>
+                      <option>Phú Thọ</option>
+                      <option>Phú Yên</option>
+                      <option>Quảng Bình</option>
+                      <option>Quảng Nam</option>
+                      <option>Quảng Ngãi</option>
+                      <option>Quảng Ninh</option>
+                      <option>Quảng Trị</option>
+                      <option>Sóc Trăng</option>
+                      <option>Sơn La</option>
+                      <option>Tây Ninh</option>
+                      <option>Thái Bình</option>
+                      <option>Thái Nguyên</option>
+                      <option>Thanh Hóa</option>
+                      <option>Thừa Thiên Huế</option>
+                      <option>Tiền Giang</option>
+                      <option>Trà Vinh</option>
+                      <option>Tuyên Quang</option>
+                      <option>Vĩnh Long</option>
+                      <option>Vĩnh Phúc</option>
+                      <option>Yên Bái</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="co-district">Quận / Huyện</label>
+                    <input class="co-input" type="text" id="co-district" placeholder="Quận 1, Huyện Bình Chánh..." />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="co-note">Ghi chú cho đơn hàng</label>
+                  <textarea class="co-textarea" id="co-note" placeholder="Ví dụ: Giao giờ hành chính, gọi trước 30 phút..."></textarea>
+                </div>
+              </div>
+
+              <!-- Shipping Method -->
+              <div class="checkout-form-card" style="margin-bottom:24px;">
+                <h2>🚚 Phương Thức Vận Chuyển</h2>
+                <div class="payment-options">
+                  <label class="payment-option">
+                    <input type="radio" name="shipping" value="standard" checked />
+                    <span class="payment-option-icon">📦</span>
+                    <div class="payment-option-text">
+                      <strong>Giao hàng tiêu chuẩn</strong>
+                      <span>2–4 ngày làm việc • Miễn phí cho đơn từ 5.000.000₫</span>
+                    </div>
+                  </label>
+                  <label class="payment-option">
+                    <input type="radio" name="shipping" value="express" />
+                    <span class="payment-option-icon">⚡</span>
+                    <div class="payment-option-text">
+                      <strong>Giao nhanh trong ngày</strong>
+                      <span>Chỉ áp dụng TP.HCM & Hà Nội • +50.000₫</span>
+                    </div>
+                  </label>
+                  <label class="payment-option">
+                    <input type="radio" name="shipping" value="pickup" />
+                    <span class="payment-option-icon">🏪</span>
+                    <div class="payment-option-text">
+                      <strong>Nhận tại cửa hàng</strong>
+                      <span>Miễn phí • Sẵn sàng sau 2 giờ</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Payment Method -->
+              <div class="checkout-form-card">
+                <h2>💳 Phương Thức Thanh Toán</h2>
+                <div class="payment-options">
+                  <label class="payment-option">
+                    <input type="radio" name="payment" value="cod" checked />
+                    <span class="payment-option-icon">💵</span>
+                    <div class="payment-option-text">
+                      <strong>Thanh toán khi nhận hàng (COD)</strong>
+                      <span>Trả tiền mặt khi nhận được hàng</span>
+                    </div>
+                  </label>
+                  <label class="payment-option">
+                    <input type="radio" name="payment" value="bank" />
+                    <span class="payment-option-icon">🏦</span>
+                    <div class="payment-option-text">
+                      <strong>Chuyển khoản ngân hàng</strong>
+                      <span>Vietcombank, Techcombank, MB Bank...</span>
+                    </div>
+                  </label>
+                  <label class="payment-option">
+                    <input type="radio" name="payment" value="momo" />
+                    <span class="payment-option-icon">📲</span>
+                    <div class="payment-option-text">
+                      <strong>Ví điện tử</strong>
+                      <span>MoMo, ZaloPay, VNPay...</span>
+                    </div>
+                  </label>
+                  <label class="payment-option">
+                    <input type="radio" name="payment" value="installment" />
+                    <span class="payment-option-icon">💳</span>
+                    <div class="payment-option-text">
+                      <strong>Trả góp 0% lãi suất</strong>
+                      <span>Visa, Mastercard, JCB qua ngân hàng đối tác</span>
+                    </div>
+                  </label>
+                </div>
+
+                <button type="submit" class="checkout-submit-btn" style="margin-top:24px;">
+                  🔒 Đặt Hàng Ngay
+                </button>
+
+                <p style="text-align:center;font-size:0.78rem;color:var(--text-muted);margin-top:14px;">
+                  🔐 Thông tin của bạn được mã hóa SSL 256-bit và bảo mật tuyệt đối
+                </p>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Right: Order Summary -->
+          <div>
+            <div class="co-summary-card">
+              <h3>🧾 Đơn Hàng Của Bạn</h3>
+              <div id="checkout-order-summary">
+                <!-- Rendered by JS -->
+              </div>
+              <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);">
+                <a href="cart.html" style="color:var(--accent);font-size:0.85rem;">← Quay lại giỏ hàng</a>
+              </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div style="margin-top:20px;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:20px;">
+              <p style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:14px;">Cam Kết Của TechZone</p>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <div style="display:flex;align-items:center;gap:10px;font-size:0.85rem;">
+                  <span>🔒</span><span>Thanh toán bảo mật SSL 256-bit</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:0.85rem;">
+                  <span>🔄</span><span>Đổi trả miễn phí trong 30 ngày</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:0.85rem;">
+                  <span>✅</span><span>100% hàng chính hãng, có hóa đơn</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:0.85rem;">
+                  <span>📞</span><span>Hỗ trợ 24/7: 1800-TECH-ZONE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Tech<span>Zone</span></a>
+        <p>Chuỗi cửa hàng điện tử trực tuyến uy tín hàng đầu Việt Nam.</p>
+        <p class="footer-contact">📞 1800-TECH-ZONE<br />📧 support@techzone.vn</p>
+      </div>
+      <div class="footer-links">
+        <h4>Sản Phẩm</h4>
+        <ul>
+          <li><a href="laptop.html">Laptop</a></li>
+          <li><a href="dien-thoai.html">Điện Thoại</a></li>
+          <li><a href="phu-kien.html">Phụ Kiện</a></li>
+          <li><a href="linh-kien-pc.html">Linh Kiện PC</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Hỗ Trợ</h4>
+        <ul>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Bảo hành</a></li>
+          <li><a href="#">Hướng dẫn mua hàng</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Về TechZone</h4>
+        <ul>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Tuyển dụng</a></li>
+          <li><a href="#">Blog Công Nghệ</a></li>
+          <li><a href="#">Tin tức</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><p>© 2025 TechZone. Tất cả quyền được bảo lưu.</p></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Generate random order code on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const code = document.getElementById('order-code-display');
+      if (code) {
+        code.textContent = 'TZ-2025-' + Math.floor(100000 + Math.random() * 900000);
+      }
+    });
+  </script>
+</body>
+</html>

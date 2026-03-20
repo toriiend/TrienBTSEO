@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giỏ Hàng – TechZone</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Tech<span>Zone</span></a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link">Trang Chủ</a>
+        <a href="laptop.html" class="nav-link">Laptop</a>
+        <a href="dien-thoai.html" class="nav-link">Điện Thoại</a>
+        <a href="phu-kien.html" class="nav-link">Phụ Kiện</a>
+        <a href="linh-kien-pc.html" class="nav-link">Linh Kiện PC</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Trang Chủ</a> › <span>Giỏ Hàng</span>
+      </nav>
+      <h1>🛒 Giỏ <span>Hàng</span></h1>
+      <p>Kiểm tra và xác nhận sản phẩm trước khi thanh toán</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cart-layout">
+
+        <!-- Cart Items -->
+        <div>
+          <div id="cart-items-container">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div id="cart-summary">
+          <!-- Rendered by JS -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- You Might Also Like -->
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Có Thể Bạn Cũng Thích</h2>
+      <p class="section-sub">Các sản phẩm bán chạy tại TechZone</p>
+      <div class="products-grid">
+
+        <article class="product-card">
+          <div class="product-badge">HOT</div>
+          <div class="product-img">🎧</div>
+          <div class="product-info">
+            <p class="product-cat">Tai Nghe</p>
+            <h3 class="product-name">Sony WH-1000XM5</h3>
+            <p class="product-desc">Chống ồn chủ động, 30h pin, Hi-Res Audio</p>
+            <div class="product-price">
+              <span class="price-new">6.490.000₫</span>
+              <span class="price-old">8.690.000₫</span>
+            </div>
+            <a href="#" class="btn btn-sm"
+               data-product-id="pk-sony-xm5"
+               data-product-name="Sony WH-1000XM5"
+               data-product-price="6490000"
+               data-product-cat="Tai Nghe"
+               data-product-emoji="🎧">🛒 Thêm Vào Giỏ</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-badge sale">-22%</div>
+          <div class="product-img">🔋</div>
+          <div class="product-info">
+            <p class="product-cat">Sạc Dự Phòng</p>
+            <h3 class="product-name">Anker 737 Power Bank</h3>
+            <p class="product-desc">24,000mAh, 140W, tương thích MacBook</p>
+            <div class="product-price">
+              <span class="price-new">1.890.000₫</span>
+              <span class="price-old">2.690.000₫</span>
+            </div>
+            <a href="#" class="btn btn-sm"
+               data-product-id="pk-anker737"
+               data-product-name="Anker 737 Power Bank"
+               data-product-price="1890000"
+               data-product-cat="Sạc Dự Phòng"
+               data-product-emoji="🔋">🛒 Thêm Vào Giỏ</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-badge new">MỚI</div>
+          <div class="product-img">⌨️</div>
+          <div class="product-info">
+            <p class="product-cat">Bàn Phím</p>
+            <h3 class="product-name">Keychron K2 Pro</h3>
+            <p class="product-desc">75%, Wireless, QMK/VIA, Hot-swap</p>
+            <div class="product-price">
+              <span class="price-new">2.490.000₫</span>
+              <span class="price-old">2.890.000₫</span>
+            </div>
+            <a href="#" class="btn btn-sm"
+               data-product-id="pk-keychron-k2"
+               data-product-name="Keychron K2 Pro"
+               data-product-price="2490000"
+               data-product-cat="Bàn Phím Cơ"
+               data-product-emoji="⌨️">🛒 Thêm Vào Giỏ</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-badge">HOT</div>
+          <div class="product-img">🔊</div>
+          <div class="product-info">
+            <p class="product-cat">Loa Bluetooth</p>
+            <h3 class="product-name">JBL Charge 5</h3>
+            <p class="product-desc">20h pin, IP67, Bluetooth 5.1, PartyBoost</p>
+            <div class="product-price">
+              <span class="price-new">3.990.000₫</span>
+              <span class="price-old">4.490.000₫</span>
+            </div>
+            <a href="#" class="btn btn-sm"
+               data-product-id="pk-jbl-c5"
+               data-product-name="JBL Charge 5"
+               data-product-price="3990000"
+               data-product-cat="Loa Bluetooth"
+               data-product-emoji="🔊">🛒 Thêm Vào Giỏ</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Tech<span>Zone</span></a>
+        <p>Chuỗi cửa hàng điện tử trực tuyến uy tín hàng đầu Việt Nam.</p>
+        <p class="footer-contact">📞 1800-TECH-ZONE<br />📧 support@techzone.vn</p>
+      </div>
+      <div class="footer-links">
+        <h4>Sản Phẩm</h4>
+        <ul>
+          <li><a href="laptop.html">Laptop</a></li>
+          <li><a href="dien-thoai.html">Điện Thoại</a></li>
+          <li><a href="phu-kien.html">Phụ Kiện</a></li>
+          <li><a href="linh-kien-pc.html">Linh Kiện PC</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Hỗ Trợ</h4>
+        <ul>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Bảo hành</a></li>
+          <li><a href="#">Hướng dẫn mua hàng</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Về TechZone</h4>
+        <ul>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Tuyển dụng</a></li>
+          <li><a href="#">Blog Công Nghệ</a></li>
+          <li><a href="#">Tin tức</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><p>© 2025 TechZone. Tất cả quyền được bảo lưu.</p></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
